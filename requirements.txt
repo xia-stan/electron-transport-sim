@@ -1,0 +1,8 @@
+numpy
+cython
+pytest
+PyYAML
+# Note: The following two packages need to be manually installed b/c their setup.py scripts
+#       do not manage the installation dependencies in a way that pip can resolve them properly.
+# git+https://github.com/UTA-REST/PyGasMix.git
+# git+https://github.com/xia-stan/PyBoltz.git
