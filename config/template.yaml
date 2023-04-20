@@ -1,0 +1,74 @@
+# Gas configuration settings
+gas:
+    # Set the gases you want with their name and their concentration up to a maximum of 6.
+    # Known Gases: Argon, CF4, CH4, CO2, Deuterium, DME, Ethane, H2O, Helium-3, Helium-4,
+    #              Hydrogen, Isobutane, Krypton, Neon, Nitrogen, Oxygen, Propane, Xenon
+    # Note: Gas fractions must total to 100%.
+    mix:
+        Argon: 90
+        CH4: 10
+    # The gas pressure in Torr.
+    pressure: 750.062
+    # The gas temperature in degrees centigrade.
+    temperature: 23.0
+
+# The number of simulated events / 2*10E7
+events: 40000000.0
+
+# Do you want to include Penning effects?
+enable_penning: False
+
+electron:
+    # Do you want to include thermal motion in the electron energy calculation  ?
+    thermal_motion: True
+    # Upper limit of electron energy integration (0.0 to automatically calculate this value).
+    max_energy: 0.0
+
+# Set the electric field strength in Volts / centimeter
+electric_field: 1000
+
+# Set the magnetic field and angle
+magnetic_field:
+    # The magnitude of the magnetic field [KiloGauss].
+    magnitude: 0
+    # The angle between the magnetic field and the electric field.
+    angle: 0
+
+# Choose the angular distribution model. If commented, then defaults to Okhrimvoskky.
+# Known Models: "Okhrimvoskky", "Capitelli Longo", "Isotropic Scattering"
+angular_model: "Capitelli Longo"
+
+# Determines if PyBoltz logs run information in the console.
+console_output: False
+
+# Provides the seed for the random number generator. Mostly useful for repeatability.
+# If this value is 0, a seed will be generated from a timestamp.
+seed: 0
+
+# Sets the threshold at which the calculations are assumed to have reached a steady state.
+steady_state_threshold: 40
+
+#-------------------------------------
+# DANGER ZONE
+#-------------------------------------
+logging:
+    version: 1
+    formatters:
+        basic:
+            format: '%(asctime)s.%(msecs)03d | %(levelname)s | %(module)s | %(funcName)s | %(message)s'
+            datefmt: "%Y-%m-%dT%H-%M-%S"
+    handlers:
+        console:
+            class: 'logging.StreamHandler'
+            level: 'INFO'
+            formatter: 'basic'
+            stream: 'ext://sys.stdout'
+        base_file:
+            class: 'logging.handlers.TimedRotatingFileHandler'
+            level: 'INFO'
+            formatter: 'basic'
+            filename: 'template_etl_runner.log'
+    root:
+        level: INFO
+        handlers: [ base_file, console ]
+        propagate: False
