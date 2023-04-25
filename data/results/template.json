@@ -1,0 +1,67 @@
+{
+    "gas": {
+        "mix": {
+            "Argon": 100
+        },
+        "temperature": 23.0,
+        "pressure": 750.062,
+        "ionization_rate_1_per_cm": 0.0,
+        "attachment_rate_1_per_cm": 0.0
+    },
+    "electric_field": 66.7,
+    "electron": {
+        "energy": {
+            "value_eV": 1.2715451846413466,
+            "error_percent": 0.8166489030020266
+        },
+        "drift_velocity": {
+            "x": {
+                "value_mm_per_mus": 0.0,
+                "error_percent": 0.0
+            },
+            "y": {
+                "value_mm_per_mus": 0.0,
+                "error_percent": 0.0
+            },
+            "z": {
+                "value_mm_per_mus": 2.141376469205606,
+                "error_percent": 1.8683176264272225
+            }
+        },
+        "mean_collision_time_ps": 1.6886063941599012
+    },
+    "diffusion": {
+        "transverse": {
+            "value_cm2_per_s": 6715.452747842898,
+            "error_percent": 19.14813269144525
+        },
+        "longitudinal": {
+            "value_cm2_per_s": 1098.8157652344566,
+            "error_percent": 23.151570898698566
+        },
+        "x": {
+            "value_cm2_per_s": 7704.948541955499,
+            "error_percent": 17.23043776673121
+        },
+        "y": {
+            "value_cm2_per_s": 5725.956953730297,
+            "error_percent": 21.065827616159293
+        },
+        "z": {
+            "value_cm2_per_s": 1098.8157652344566,
+            "error_percent": 23.151570898698566
+        },
+        "yz": {
+            "value_cm2_per_s": 0.0,
+            "error_percent": 0.0
+        },
+        "xy": {
+            "value_cm2_per_s": 0.0,
+            "error_percent": 0.0
+        },
+        "xz": {
+            "value_cm2_per_s": 0.0,
+            "error_percent": 0.0
+        }
+    }
+}
