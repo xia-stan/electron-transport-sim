@@ -98,7 +98,8 @@ def config_boltz(cfg, obj):
     obj.Which_Angular_Model = ANGULAR_MODEL_MAP[cfg['angular_model']]
 
 
-def output_results(ofile, boltz):
+
+def output_results(cfg, ofile, boltz):
     """
 
     :param boltz:
@@ -106,7 +107,7 @@ def output_results(ofile, boltz):
     """
     results = {
         "gas": {
-            "mix": {},
+            "mix": cfg['gas']['mix'],
             "temperature": boltz.TemperatureCentigrade,
             "pressure": boltz.Pressure_Torr,
             "ionization_rate_1_per_cm": boltz.IonisationRate,
@@ -191,7 +192,7 @@ def main(args):
         boltz.Start()
         logger.info("Simulation finished.")
         logger.info("Outputting the results to file.")
-        output_results(args.output, boltz)
+        output_results(cfg, args.output, boltz)
     except ValueError as verr:
         logger.error(verr)
     finally:
