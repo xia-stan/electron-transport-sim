@@ -65,9 +65,11 @@ logging:
             stream: 'ext://sys.stdout'
         base_file:
             class: 'logging.handlers.TimedRotatingFileHandler'
+            when: 'd'
+            backupCount: '5'
             level: 'INFO'
             formatter: 'basic'
-            filename: 'template_etl_runner.log'
+            filename: 'logs/sim.log'
     root:
         level: INFO
         handlers: [ base_file, console ]
