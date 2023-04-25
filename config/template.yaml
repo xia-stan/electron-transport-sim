@@ -5,8 +5,7 @@ gas:
     #              Hydrogen, Isobutane, Krypton, Neon, Nitrogen, Oxygen, Propane, Xenon
     # Note: Gas fractions must total to 100%.
     mix:
-        Argon: 90
-        CH4: 10
+        Argon: 100
     # The gas pressure in Torr.
     pressure: 750.062
     # The gas temperature in degrees centigrade.
@@ -25,7 +24,7 @@ electron:
     max_energy: 0.0
 
 # Set the electric field strength in Volts / centimeter
-electric_field: 1000
+electric_field: 66.7
 
 # Set the magnetic field and angle
 magnetic_field:
