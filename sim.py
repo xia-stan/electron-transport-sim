@@ -3,6 +3,7 @@ import argparse
 import json
 import logging
 import logging.config
+import time
 
 from PyBoltz.Boltz import Boltz
 import yaml
@@ -97,6 +98,11 @@ def config_boltz(cfg, obj):
     obj.Steady_State_Threshold = cfg['steady_state_threshold']
     obj.Which_Angular_Model = ANGULAR_MODEL_MAP[cfg['angular_model']]
 
+    if cfg['seed'] == 0:
+        seed = time.time()
+    else:
+        seed = cfg['seed']
+    obj.Random_Seed(seed)
 
 
 def output_results(cfg, ofile, boltz):

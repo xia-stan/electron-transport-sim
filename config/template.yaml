@@ -39,11 +39,7 @@ magnetic_field:
 angular_model: "Capitelli Longo"
 
 # Determines if PyBoltz logs run information in the console.
-console_output: False
-
-# Provides the seed for the random number generator. Mostly useful for repeatability.
-# If this value is 0, a seed will be generated from a timestamp.
-seed: 0
+console_output: True
 
 # Sets the threshold at which the calculations are assumed to have reached a steady state.
 steady_state_threshold: 40
@@ -51,6 +47,10 @@ steady_state_threshold: 40
 #-------------------------------------
 # DANGER ZONE
 #-------------------------------------
+# Provides the seed for the random number generator. Mostly useful for repeatability.
+# If this value is 0, a seed will be generated from a timestamp.
+seed: 0
+
 logging:
     version: 1
     formatters:
