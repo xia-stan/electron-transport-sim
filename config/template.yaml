@@ -12,14 +12,14 @@ gas:
     # The gas temperature in degrees centigrade.
     temperature: 23.0
 
-# The number of simulated events / 2*10E7
-events: 40000000.0
+# The number of simulated events.
+events: 40000000
 
 # Do you want to include Penning effects?
 enable_penning: False
 
 electron:
-    # Do you want to include thermal motion in the electron energy calculation  ?
+    # Do you want to include thermal motion in the electron energy calculation?
     thermal_motion: True
     # Upper limit of electron energy integration (0.0 to automatically calculate this value).
     max_energy: 0.0
