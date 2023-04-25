@@ -179,6 +179,7 @@ def output_results(cfg, ofile, boltz):
     with open(ofile, "w") as out:
         json.dump(results, out, indent=4)
 
+
 def main(args):
     """
     :param args: The command line arguments obtained from argparse.
