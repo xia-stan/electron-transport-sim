@@ -102,7 +102,7 @@ def config_boltz(cfg, obj):
         seed = time.time()
     else:
         seed = cfg['seed']
-    obj.Random_Seed(seed)
+    obj.Random_Seed = round(seed)
 
 
 def output_results(cfg, ofile, boltz):
