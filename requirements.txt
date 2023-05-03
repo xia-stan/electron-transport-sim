@@ -1,8 +1,8 @@
-numpy
-cython
-pytest
-PyYAML
-# Note: The following two packages need to be manually installed b/c their setup.py scripts
-#       do not manage the installation dependencies in a way that pip can resolve them properly.
-# git+https://github.com/UTA-REST/PyGasMix.git
-# git+https://github.com/xia-stan/PyBoltz.git
+Cython==0.29.34
+exceptiongroup==1.1.1
+iniconfig==2.0.0
+numpy==1.24.3
+packaging==23.1
+pluggy==1.0.0
+pytest==7.3.1
+tomli==2.0.1
